@@ -10,6 +10,12 @@ the slave; they are connected in a ring. SPI interface defines only the communic
 ### Block diagrams of Master and Slave blocks
 <p align="middle">
 <img src="https://raw.githubusercontent.com/akshayapurohit23/Serial-Peripheral-Interface/master/assets/Images/MasterModule.jpg" align="middle" height=400>
+<br>
+ Master Block 
 </p>
 
-<img src="https://raw.githubusercontent.com/akshayapurohit23/Serial-Peripheral-Interface/master/assets/Images/SlaveModule.png" align="middle" >
+<p aligh="middle">
+<img src="https://raw.githubusercontent.com/akshayapurohit23/Serial-Peripheral-Interface/master/assets/Images/SlaveModule.png" align="middle" height=300>
+<br>
+  Slave Block
+</p>
