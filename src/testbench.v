@@ -1,7 +1,6 @@
 `timescale 1ns/100ps
 
 module tb;
-
 	reg clk,reset,enable,CPOL,CPHA;
 	reg [7:0] master_data_in,slave_data_in,temp_master,temp_slave;
 	reg [1:0] clk_sel;
