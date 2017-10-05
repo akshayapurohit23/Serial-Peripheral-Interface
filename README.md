@@ -20,7 +20,7 @@ the slave; they are connected in a ring. SPI interface defines only the communic
   Slave Block
 </p>
 
-### Contributors
+## Contributors
 ```
 Akshaya Purohit
 Somanshu Agarwal
