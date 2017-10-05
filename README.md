@@ -19,3 +19,9 @@ the slave; they are connected in a ring. SPI interface defines only the communic
 <br>
   Slave Block
 </p>
+
+### Contributors
+```
+Akshaya Purohit
+Somanshu Agarwal
+```
