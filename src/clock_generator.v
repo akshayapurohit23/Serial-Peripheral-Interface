@@ -1,7 +1,6 @@
 module clock_generator(input clk,CPOL,CPHA,reset,
 					   input [1:0] clk_sel,
-					   output reg clk_int);
-					  
+					   output reg clk_int);				  
 	reg clk2,clk4,clk16,clk32;
 	reg [3:0] p16;
 	reg [4:0] p32;					  
