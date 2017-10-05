@@ -27,7 +27,6 @@ module master(input clk,reset,
 				sclk = CPOL;
 	end		
 
-
 	always@(posedge clk_int or posedge reset)
 	begin
 	if(reset)
@@ -35,7 +34,6 @@ module master(input clk,reset,
 		else
 			count<=next_count;
 	end
-
 
 	always@(*)
 	begin
@@ -50,7 +48,6 @@ module master(input clk,reset,
 			next_count=0;
 	end
 
-
 	always@(posedge clk_int or posedge reset)
 	begin
 	    if(reset) 
@@ -58,9 +55,6 @@ module master(input clk,reset,
 		else      
 			SPDR_m<=next_SPDR;
 	end
-
-
-
 
 	always@(*)
 	begin

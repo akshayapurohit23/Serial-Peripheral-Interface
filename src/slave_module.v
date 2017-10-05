@@ -9,7 +9,6 @@ module slave(input sclk,reset,ss,mosi,CPOL,CPHA,
 	reg clk_int;
 	reg [3:0] count,next_count;
 				 
-
 	always@(posedge clk_int)
 	slave_data_out <= data_out;
 	  			 
@@ -43,8 +42,6 @@ module slave(input sclk,reset,ss,mosi,CPOL,CPHA,
 	          next_count=count+1;
 	end
 
-
-
 	always@(*)
 	begin
 	     if(ss)
@@ -64,7 +61,6 @@ module slave(input sclk,reset,ss,mosi,CPOL,CPHA,
 			else		
 				SPDR_s<=next_SPDR;
 	end	  
-
 
 	assign miso=SPDR_s[0];
 
