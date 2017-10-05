@@ -56,18 +56,18 @@ module slave(input sclk,reset,ss,mosi,CPOL,CPHA,
 
 	always @(posedge clk_int or posedge reset)
 	begin
-			if(reset) SPDR_s<=0;
-			else		
-				SPDR_s<=next_SPDR;
+		if(reset) SPDR_s<=0;
+		else		
+			SPDR_s<=next_SPDR;
 	end	  
 
 	assign miso=SPDR_s[0];
 
 	always@(*)
 	begin
-	  	  if(count==9)
-	            data_out=SPDR_s;
-	      else
-	            data_out=slave_data_out;
+		if(count==9)
+			data_out=SPDR_s;
+		else
+			data_out=slave_data_out;
 	end
 endmodule 

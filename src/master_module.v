@@ -15,20 +15,20 @@ module master(input clk,reset,
 
 	always @(*)
 	begin
-	       if(enable)
-			begin
-				if(~(CPOL^CPHA))
-					sclk = clk_int;
-				else
-					sclk = ~clk_int;
-			end
+       if(enable)
+		begin
+			if(~(CPOL^CPHA))
+				sclk = clk_int;
 			else
-				sclk = CPOL;
+				sclk = ~clk_int;
+		end
+		else
+			sclk = CPOL;
 	end		
 
 	always@(posedge clk_int or posedge reset)
 	begin
-	if(reset)
+		if(reset)
 			count<=0;
 		else
 			count<=next_count;

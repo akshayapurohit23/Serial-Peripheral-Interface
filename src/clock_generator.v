@@ -27,10 +27,10 @@ module clock_generator(input clk,CPOL,CPHA,reset,
 	    if(reset)  clk4<=CPOL;
 	    else   
 		begin
-				if(p4==1 || p4==3)	
-					clk4<=~clk4;
-				else
-					clk4<=clk4;
+			if(p4==1 || p4==3)	
+				clk4<=~clk4;
+			else
+				clk4<=clk4;
 		end
 	end 
 
@@ -48,10 +48,10 @@ module clock_generator(input clk,CPOL,CPHA,reset,
 			clk16<=CPOL;
 	    else
 		begin
-				if(p16==7 || p16==15)
-					clk16<=~clk16;
-				else
-					clk16<=clk16;
+			if(p16==7 || p16==15)
+				clk16<=~clk16;
+			else
+				clk16<=clk16;
 		end
 	end 
 
@@ -69,35 +69,35 @@ module clock_generator(input clk,CPOL,CPHA,reset,
 			clk32<=CPOL;
 	    else
 		begin
-				if(p32==15 || p32==31)
-					clk32<=~clk32;
-				else
-					clk32<=clk32;
+			if(p32==15 || p32==31)
+				clk32<=~clk32;
+			else
+				clk32<=clk32;
 		end
 	end 
 
 	always @(*)
 	begin
-			if(~(CPOL^CPHA))
-			begin
-				case(clk_sel[1:0])
-				0:clk_int=clk2;
-				1:clk_int=clk4;
-				2:clk_int=clk16;
-				3:clk_int=clk32;
-				default:clk_int=clk2;
-				endcase
-			end
-			else
-			begin
-				case(clk_sel[1:0])
-				0:clk_int=~clk2;
-				1:clk_int=~clk4;
-				2:clk_int=~clk16;
-				3:clk_int=~clk32;
-				default:clk_int=~clk2;
-				endcase
-			end
+		if(~(CPOL^CPHA))
+		begin
+			case(clk_sel[1:0])
+			0:clk_int=clk2;
+			1:clk_int=clk4;
+			2:clk_int=clk16;
+			3:clk_int=clk32;
+			default:clk_int=clk2;
+			endcase
+		end
+		else
+		begin
+			case(clk_sel[1:0])
+			0:clk_int=~clk2;
+			1:clk_int=~clk4;
+			2:clk_int=~clk16;
+			3:clk_int=~clk32;
+			default:clk_int=~clk2;
+			endcase
+		end
 	end
 					  
 endmodule
