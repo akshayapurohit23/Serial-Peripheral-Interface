@@ -1,12 +1,12 @@
 `include "clock_generator.v"
 
 module master(input clk,reset,
-			  input [7:0] master_data_in,
+	      input [7:0] master_data_in,
               input enable,miso,CPOL,CPHA,
-			  input [1:0] clk_sel,
-			  output mosi, 
-			  output reg sclk,ss,
-			  output reg [7:0] master_data_out);		  
+	      input [1:0] clk_sel,
+	      output mosi,
+	      output reg sclk,ss,
+	      output reg [7:0] master_data_out);		  
 	wire clk_int;
 	reg [3:0] count,next_count;
 	reg [7:0] next_SPDR,SPDR_m;
