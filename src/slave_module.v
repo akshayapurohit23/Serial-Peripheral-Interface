@@ -3,8 +3,7 @@
 module slave(input sclk,reset,ss,mosi,CPOL,CPHA,
 		     input [7:0] slave_data_in,
 			 output miso,
-			 output reg[7:0] slave_data_out);
-			 
+			 output reg[7:0] slave_data_out); 
 	reg [7:0] next_SPDR,data_out,SPDR_s;
 	reg clk_int;
 	reg [3:0] count,next_count;
